@@ -16,7 +16,8 @@ import {
     MultiSelectModule,
     RadioButtonModule,
     SliderModule,
-    SpinnerModule
+    SpinnerModule,
+    RatingModule
 } from "primeng/primeng";
 
 @NgModule({
@@ -37,7 +38,8 @@ import {
         MultiSelectModule,
         RadioButtonModule,
         SliderModule,
-        SpinnerModule
+        SpinnerModule,
+        RatingModule
     ],
     declarations: [
         DynamicFormPrimeNGComponent

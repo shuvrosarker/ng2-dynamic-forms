@@ -25,6 +25,7 @@ export * from "./src/model/input/dynamic-input.model";
 export * from "./src/model/radio/dynamic-radio-group.model";
 export * from "./src/model/select/dynamic-select.model";
 export * from "./src/model/slider/dynamic-slider.model";
+export * from "./src/model/rating/rating.model";
 export * from "./src/model/switch/dynamic-switch.model";
 export * from "./src/model/textarea/dynamic-textarea.model";
 

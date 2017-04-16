@@ -203,6 +203,11 @@
                       [max]="model.max"
                       [step]="model.step"></p-slider>
 
+            <p-rating *ngSwitchCase="15"
+                      [dynamicId]="bindId && model.id"
+                      [formControlName]="model.id">
+            </p-rating>
+
 
             <textarea *ngSwitchCase="14" pInputTextarea
                       [attr.tabindex]="model.tabIndex"

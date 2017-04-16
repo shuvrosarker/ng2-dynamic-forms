@@ -13,7 +13,8 @@ export const enum PFormControlType {
     MultiSelect = 11,
     RadioGroup = 12,
     Slider = 13,
-    TextArea = 14
+    TextArea = 14,
+    Rating = 15,
 }
 
 export const PRIMENG_AUTOCOMPLETE_TEMPLATE_DIRECTIVES = {

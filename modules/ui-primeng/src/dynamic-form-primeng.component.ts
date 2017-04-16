@@ -18,6 +18,7 @@ import {
     DYNAMIC_FORM_CONTROL_TYPE_RADIO_GROUP,
     DYNAMIC_FORM_CONTROL_TYPE_SELECT,
     DYNAMIC_FORM_CONTROL_TYPE_SLIDER,
+    DYNAMIC_FORM_CONTROL_TYPE_RATING,
     DYNAMIC_FORM_CONTROL_TYPE_SWITCH,
     DYNAMIC_FORM_CONTROL_TYPE_TEXTAREA
 } from "@ng2-dynamic-forms/core";
@@ -30,7 +31,8 @@ import {
     Editor,
     InputSwitch,
     MultiSelect,
-    Slider
+    Slider,
+    Rating
 } from "primeng/primeng";
 import {
     PFormControlType,
@@ -40,7 +42,6 @@ import {
 } from "./dynamic-form-primeng.const";
 
 @Component({
-
     moduleId: module.id,
     selector: "dynamic-form-primeng-control",
     templateUrl: "./dynamic-form-primeng.component.html"
@@ -75,6 +76,7 @@ export class DynamicFormPrimeNGComponent extends DynamicFormControlComponent {
     @ViewChild(InputSwitch) pInputSwitch: InputSwitch | null;
     @ViewChild(MultiSelect) pMultiSelect: MultiSelect | null;
     @ViewChild(Slider) pSlider: Slider | null;
+    @ViewChild(Rating) pRating: Rating | null;
 
     private suggestions: string[];
 
@@ -153,6 +155,9 @@ export class DynamicFormPrimeNGComponent extends DynamicFormControlComponent {
                 model = this.model as DynamicSelectModel<any>;
 
                 return model.multiple ? PFormControlType.MultiSelect : PFormControlType.DropDown;
+
+            case DYNAMIC_FORM_CONTROL_TYPE_RATING:
+                return PFormControlType.Rating;
 
             case DYNAMIC_FORM_CONTROL_TYPE_SLIDER:
                 return PFormControlType.Slider;
